@@ -46,24 +46,32 @@ images/source/  Original full-size logo files
 images/team/    Team photos carried over from the old site
 ```
 
-## Team photos
+## Team
 
-Carried over from the old WordPress site and re-encoded — the originals totalled ~3.6 MB, which is slow on rural connections. They are now 376 KB in total (group photo 1000×1000, headshots 440×440, JPEG q84).
+Four advisors, each with a direct number and a call button. The list appears on both the homepage and the About page — **edit both** when it changes.
 
-Name-to-photo mapping was taken from the old site's carousel order:
-
-| New file | Old file | Name |
+| File | Name | Direct number |
 |---|---|---|
-| `team-kelli.jpg` | `11.png` | Kelli |
-| `team-nancy.jpg` | `10.png` | Nancy |
-| `team-mckenzie.jpg` | `6.png` | McKenzie |
-| `team-karissa.jpg` | `9.png` | Karissa |
-| `team-shawn.jpg` | `7-1.png` | Shawn |
-| `team-hannah.jpg` | `8.png` | Hannah |
+| `team-kelli.jpg` | Kelli | 563-278-2526 |
+| `team-nancy.jpg` | Nancy | 563-412-6693 |
+| `team-mckenzie.jpg` | McKenzie | 563-893-8350 |
+| `team-shawn.jpg` | Shawn | 512-399-5547 |
 
-**Please spot-check these against the faces** — the old site paired them by position in a carousel rather than by filename, so the mapping is inferred.
+Headshots are 440×440 JPEG q84, displayed as circular crops. Photos came from the old WordPress site, where names were paired to faces by carousel position rather than filename — **worth a spot-check that each name is on the right face.**
 
-Not carried over: the old cyan logo (superseded), a stock photo, the decorative wave background, the carrier logos (BCBS/Aetna/UnitedHealthcare/Humana), and the *Medicare & You 2024* handbook cover (outdated edition).
+Shawn's `512-399-5547` is an Austin, Texas area code, unlike the 563/515/319 numbers elsewhere. Reproduced as the old site had it; verify it is current.
+
+`team-group.jpg` is the three-person group photo (Nancy, Kelli, McKenzie), cropped to 3:2 and compressed from 4.3 MB to 164 KB. Full-size originals live in `images/source/team-originals/`.
+
+The grid uses **fixed** column counts (4 across, 2 below 900px), not `auto-fit`. An auto-fit grid picks its own column count and will orphan the last person on a row alone. If you add or remove an advisor, update `grid-template-columns` in `css/style.css` to keep the rows even.
+
+Not carried over from the old site: the cyan logo (superseded), a stock photo, the wave background, the carrier logos (BCBS/Aetna/UnitedHealthcare/Humana — see below), and the *Medicare & You 2024* handbook cover (outdated edition).
+
+Karissa and Hannah were removed from the team in August 2026. Their original headshots remain in `images/source/team-originals/` if they are ever needed again.
+
+## Carrier logos
+
+The old site displayed BlueCross BlueShield, Aetna, UnitedHealthcare and Humana logos. These are deliberately **not** on this site: CMS marketing rules around Medicare Advantage co-branding generally require carrier approval. Add them only if you have that sign-off on file.
 
 ## Accessibility notes
 

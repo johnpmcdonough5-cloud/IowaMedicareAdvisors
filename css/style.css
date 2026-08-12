@@ -368,15 +368,16 @@ section.alt {
   margin-bottom: 44px;
 }
 
-/* Fixed 3 columns so six people split evenly into two rows —
-   an auto-fit grid orphans the sixth person on a row of her own. */
+/* Fixed column counts, not auto-fit: auto-fit picks a count based on
+   available width and can leave the last person orphaned on her own row.
+   Four across here matches the four advisors; 2x2 below 900px. */
 .team-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px 28px;
 }
 
 .team-grid li {
@@ -650,6 +651,9 @@ footer.site-footer li {
   .two-col,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   footer.site-footer .foot-cols {
     grid-template-columns: 1fr 1fr;
