@@ -358,6 +358,44 @@ section.alt {
   margin: 0;
 }
 
+/* Team photos */
+.team-group-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid var(--gray-100);
+  margin-bottom: 28px;
+}
+
+.team-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+}
+
+.team-grid li {
+  text-align: center;
+}
+
+.team-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #fff;
+  margin-bottom: 12px;
+}
+
+.team-name {
+  display: block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+
 /* Callout */
 .callout {
   background: var(--navy);

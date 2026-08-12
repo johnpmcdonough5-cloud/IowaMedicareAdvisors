@@ -2,19 +2,16 @@
 
 Simple static site: home, about, plans, and contact pages. No build step required.
 
-## Before publishing
+## Contact details
 
-**Still a placeholder — replace before going live:**
+All taken from the previous site (iowamedicareadvisors.com) so formatting matches:
 
-- Email: `info@iowamedicareadvisors.com` — appears in all four HTML files (footer), plus twice in `contact.html` (the Office Details list and the contact form's `mailto:` handler at the bottom of the file). Find and replace across all four files.
-
-**Already set to real details:**
-
-- Phone: `(319) 238-4440` (`tel:+13192384440`)
+- Phone: `319-238-4440` — displayed with hyphens, matching the old site. Links use `tel:+13192384440`.
+- Email: `jack@aihealthinsure.com`
 - Address: 955 N Frederick Ave, Oelwein, IA 50662
-- Office hours in `contact.html`: Mon–Fri 9:00–5:00 — edit if these are wrong.
+- Office hours in `contact.html`: Mon–Fri 9:00–5:00 — **unverified**, these were not on the old site. Edit if wrong.
 
-The address and phone also appear in the `InsuranceAgency` structured-data block in the `<head>` of `index.html`. If you change either one, update it there too so search engines stay in sync.
+The phone and address also appear in the `InsuranceAgency` structured-data block in the `<head>` of `index.html`. If either changes, update it there too so search engines stay in sync.
 
 ## Host on GitHub Pages
 
@@ -46,7 +43,27 @@ css/style.css   All styling
 js/main.js      Mobile nav toggle
 images/         Logo assets (blue for light bg, white for dark bg)
 images/source/  Original full-size logo files
+images/team/    Team photos carried over from the old site
 ```
+
+## Team photos
+
+Carried over from the old WordPress site and re-encoded — the originals totalled ~3.6 MB, which is slow on rural connections. They are now 376 KB in total (group photo 1000×1000, headshots 440×440, JPEG q84).
+
+Name-to-photo mapping was taken from the old site's carousel order:
+
+| New file | Old file | Name |
+|---|---|---|
+| `team-kelli.jpg` | `11.png` | Kelli |
+| `team-nancy.jpg` | `10.png` | Nancy |
+| `team-mckenzie.jpg` | `6.png` | McKenzie |
+| `team-karissa.jpg` | `9.png` | Karissa |
+| `team-shawn.jpg` | `7-1.png` | Shawn |
+| `team-hannah.jpg` | `8.png` | Hannah |
+
+**Please spot-check these against the faces** — the old site paired them by position in a carousel rather than by filename, so the mapping is inferred.
+
+Not carried over: the old cyan logo (superseded), a stock photo, the decorative wave background, the carrier logos (BCBS/Aetna/UnitedHealthcare/Humana), and the *Medicare & You 2024* handbook cover (outdated edition).
 
 ## Accessibility notes
 
