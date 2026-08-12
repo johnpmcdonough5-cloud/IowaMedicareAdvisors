@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Iowa Medicare Advisors</title>
+<meta name="description" content="Contact Iowa Medicare Advisors for a no-cost, no-obligation Medicare consultation.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/logo-icon-blue.png">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="container">
+    <span>Oelwein, Iowa &mdash; serving Medicare beneficiaries statewide</span>
+    <span><a href="tel:+13192384440">(319) 238-4440</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html"><img src="images/logo-horizontal-blue.png" alt="Iowa Medicare Advisors" class="brand-logo" width="1758" height="434"></a>
+    <a class="call-now" href="tel:+13192384440">Call (319) 238-4440</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plans.html">Medicare Plans</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="main" class="page-hero">
+  <div class="container">
+    <span class="badge">Contact</span>
+    <h1>Talk to a licensed advisor.</h1>
+    <p>No cost, no obligation. Reach out by phone, email, or the form below and we'll follow up to schedule a time to talk.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2 class="section-title">Office details</h2>
+      <dl>
+        <dt>Phone</dt>
+        <dd><a href="tel:+13192384440">(319) 238-4440</a></dd>
+
+        <dt>Office Address</dt>
+        <dd>
+          <address>955 N Frederick Ave<br>Oelwein, IA 50662</address>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=955+N+Frederick+Ave+Oelwein+IA+50662" target="_blank" rel="noopener">Get directions</a>
+        </dd>
+
+        <dt>Email</dt>
+        <dd><a href="mailto:info@iowamedicareadvisors.com">info@iowamedicareadvisors.com</a></dd>
+
+        <dt>Service Area</dt>
+        <dd>Serving Medicare beneficiaries throughout Iowa</dd>
+
+        <dt>Office Hours</dt>
+        <dd>Monday – Friday, 9:00 AM – 5:00 PM<br>Evenings and weekends available by appointment</dd>
+      </dl>
+    </div>
+
+    <div>
+      <h2 class="section-title">Send a message</h2>
+      <form class="contact-form" id="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <p class="form-note">Submitting opens your email client with this message addressed to our office. We never sell or share your information.</p>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-cols">
+      <div>
+        <img src="images/logo-horizontal-white.png" alt="Iowa Medicare Advisors" class="footer-logo" width="1661" height="398">
+        <p class="footer-tagline">Your &ldquo;one stop&rdquo; shop for everything Medicare.</p>
+        <p>Independent Medicare guidance for individuals and families across the state of Iowa.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="plans.html">Medicare Plans</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13192384440">(319) 238-4440</a></li>
+          <li><a href="mailto:info@iowamedicareadvisors.com">info@iowamedicareadvisors.com</a></li>
+          <li><address>955 N Frederick Ave<br>Oelwein, IA 50662</address></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p>We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE, or your local State Health Insurance Program (SHIP), to get information on all of your options.</p>
+      <p>&copy; 2026 Iowa Medicare Advisors. This is not a government website and is not connected with or endorsed by the U.S. government or the federal Medicare program.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  var form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = encodeURIComponent(document.getElementById("name").value);
+      var phone = encodeURIComponent(document.getElementById("phone").value);
+      var email = document.getElementById("email").value;
+      var message = encodeURIComponent(document.getElementById("message").value);
+      var body = "Name: " + name + "%0D%0APhone: " + phone + "%0D%0AEmail: " + encodeURIComponent(email) + "%0D%0A%0D%0A" + message;
+      window.location.href = "mailto:info@iowamedicareadvisors.com?subject=Medicare%20Consultation%20Request&body=" + body;
+    });
+  }
+</script>
+</body>
+</html>
